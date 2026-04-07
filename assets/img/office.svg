@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-label="Oficina VG Logistics en Lleida">
+  <defs>
+    <linearGradient id="o-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c9dff2"/>
+      <stop offset="100%" stop-color="#eef3f9"/>
+    </linearGradient>
+    <linearGradient id="o-building" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6f9fc"/>
+      <stop offset="100%" stop-color="#d8e1ec"/>
+    </linearGradient>
+    <linearGradient id="o-glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8ec5ff"/>
+      <stop offset="100%" stop-color="#3a8dd6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cielo -->
+  <rect width="500" height="280" fill="url(#o-sky)"/>
+  <!-- Suelo -->
+  <rect y="280" width="500" height="120" fill="#c9d7e6"/>
+  <line x1="0" y1="290" x2="500" y2="290" stroke="#b8c5d6" stroke-width="1"/>
+
+  <!-- Edificio principal: Neoparc I -->
+  <g>
+    <rect x="120" y="80" width="260" height="220" fill="url(#o-building)" stroke="#0a2540" stroke-width="2"/>
+    <!-- Entrada -->
+    <rect x="225" y="250" width="50" height="50" fill="#0a2540"/>
+    <rect x="230" y="260" width="40" height="40" fill="url(#o-glass)"/>
+    <!-- Letrero -->
+    <rect x="175" y="88" width="150" height="22" rx="3" fill="#0a2540"/>
+    <text x="250" y="104" font-family="Inter, sans-serif" font-size="11" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.5">VG LOGISTICS</text>
+    <!-- Ventanas por pisos -->
+    <g fill="url(#o-glass)" stroke="#0a2540" stroke-width="1">
+      <rect x="140" y="125" width="28" height="22"/>
+      <rect x="175" y="125" width="28" height="22"/>
+      <rect x="210" y="125" width="28" height="22"/>
+      <rect x="245" y="125" width="28" height="22"/>
+      <rect x="280" y="125" width="28" height="22"/>
+      <rect x="315" y="125" width="28" height="22"/>
+      <rect x="350" y="125" width="28" height="22"/>
+
+      <rect x="140" y="155" width="28" height="22"/>
+      <rect x="175" y="155" width="28" height="22"/>
+      <rect x="210" y="155" width="28" height="22"/>
+      <rect x="245" y="155" width="28" height="22"/>
+      <rect x="280" y="155" width="28" height="22"/>
+      <rect x="315" y="155" width="28" height="22"/>
+      <rect x="350" y="155" width="28" height="22"/>
+
+      <rect x="140" y="185" width="28" height="22"/>
+      <rect x="175" y="185" width="28" height="22"/>
+      <rect x="210" y="185" width="28" height="22"/>
+      <rect x="245" y="185" width="28" height="22"/>
+      <rect x="280" y="185" width="28" height="22"/>
+      <rect x="315" y="185" width="28" height="22"/>
+      <rect x="350" y="185" width="28" height="22"/>
+
+      <rect x="140" y="215" width="28" height="22"/>
+      <rect x="175" y="215" width="28" height="22"/>
+      <rect x="210" y="215" width="28" height="22"/>
+      <rect x="315" y="215" width="28" height="22"/>
+      <rect x="350" y="215" width="28" height="22"/>
+    </g>
+    <!-- Luz en una ventana -->
+    <rect x="280" y="215" width="28" height="22" fill="#ffae00"/>
+
+    <!-- Señal de piso 5 -->
+    <rect x="395" y="195" width="45" height="30" rx="4" fill="#ff6b35"/>
+    <text x="417" y="215" font-family="Inter, sans-serif" font-size="15" font-weight="900" fill="#fff" text-anchor="middle">5º</text>
+  </g>
+
+  <!-- Edificios secundarios -->
+  <rect x="50" y="150" width="70" height="150" fill="#b8c5d6"/>
+  <g fill="#8ec5ff" opacity="0.8">
+    <rect x="60" y="165" width="12" height="12"/>
+    <rect x="85" y="165" width="12" height="12"/>
+    <rect x="60" y="185" width="12" height="12"/>
+    <rect x="85" y="185" width="12" height="12"/>
+    <rect x="60" y="205" width="12" height="12"/>
+    <rect x="85" y="205" width="12" height="12"/>
+    <rect x="60" y="225" width="12" height="12"/>
+    <rect x="85" y="225" width="12" height="12"/>
+  </g>
+
+  <rect x="380" y="170" width="70" height="130" fill="#b8c5d6"/>
+  <g fill="#8ec5ff" opacity="0.8">
+    <rect x="390" y="185" width="12" height="12"/>
+    <rect x="415" y="185" width="12" height="12"/>
+    <rect x="390" y="205" width="12" height="12"/>
+    <rect x="415" y="205" width="12" height="12"/>
+    <rect x="390" y="225" width="12" height="12"/>
+    <rect x="415" y="225" width="12" height="12"/>
+  </g>
+
+  <!-- Camión pequeño en primer plano -->
+  <g transform="translate(60,325)">
+    <rect x="0" y="0" width="80" height="30" rx="3" fill="#fff" stroke="#0a2540" stroke-width="1.5"/>
+    <rect x="80" y="10" width="20" height="20" rx="2" fill="#1e6fb8"/>
+    <rect x="3" y="3" width="74" height="6" rx="1" fill="#ff6b35"/>
+    <text x="40" y="22" font-family="Inter, sans-serif" font-size="9" font-weight="900" fill="#0a2540" text-anchor="middle">VGL</text>
+    <circle cx="15" cy="32" r="6" fill="#0a2540"/>
+    <circle cx="65" cy="32" r="6" fill="#0a2540"/>
+    <circle cx="90" cy="32" r="6" fill="#0a2540"/>
+  </g>
+
+  <!-- Nubes -->
+  <g fill="#fff" opacity="0.8">
+    <ellipse cx="70" cy="60" rx="30" ry="10"/>
+    <ellipse cx="90" cy="55" rx="20" ry="8"/>
+    <ellipse cx="420" cy="45" rx="25" ry="8"/>
+    <ellipse cx="440" cy="50" rx="18" ry="6"/>
+  </g>
+
+  <!-- Árbol decorativo -->
+  <g transform="translate(460,260)">
+    <rect x="-3" y="30" width="6" height="20" fill="#8b5f3f"/>
+    <circle cx="0" cy="20" r="18" fill="#6db74a"/>
+    <circle cx="-8" cy="15" r="10" fill="#6db74a"/>
+    <circle cx="8" cy="15" r="10" fill="#6db74a"/>
+  </g>
+</svg>

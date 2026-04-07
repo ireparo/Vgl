@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sector hortofrutícola">
+  <defs>
+    <linearGradient id="p-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e3f2dc"/>
+      <stop offset="100%" stop-color="#f0f9ea"/>
+    </linearGradient>
+    <radialGradient id="p-apple">
+      <stop offset="0%" stop-color="#ff8d3a"/>
+      <stop offset="100%" stop-color="#d94417"/>
+    </radialGradient>
+    <radialGradient id="p-orange">
+      <stop offset="0%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#f08d1e"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" rx="20" fill="url(#p-bg)"/>
+
+  <!-- Caja de madera -->
+  <path d="M80 180 L320 180 L310 260 L90 260 Z" fill="#c99673"/>
+  <path d="M80 180 L320 180 L310 260 L90 260 Z" fill="none" stroke="#8b5f3f" stroke-width="2"/>
+  <line x1="85" y1="210" x2="315" y2="210" stroke="#8b5f3f" stroke-width="1.5"/>
+  <line x1="200" y1="180" x2="200" y2="260" stroke="#8b5f3f" stroke-width="1.5"/>
+
+  <!-- Manzanas -->
+  <g>
+    <circle cx="140" cy="170" r="25" fill="url(#p-apple)"/>
+    <ellipse cx="132" cy="160" rx="6" ry="3" fill="#fff" opacity="0.4"/>
+    <path d="M140 145 Q143 135 150 138" stroke="#3d6a2c" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <ellipse cx="148" cy="138" rx="6" ry="3" fill="#6db74a" transform="rotate(-20 148 138)"/>
+
+    <circle cx="200" cy="175" r="28" fill="url(#p-apple)"/>
+    <ellipse cx="190" cy="162" rx="7" ry="3" fill="#fff" opacity="0.4"/>
+    <path d="M200 148 Q204 140 212 143" stroke="#3d6a2c" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Naranjas -->
+  <circle cx="260" cy="170" r="24" fill="url(#p-orange)"/>
+  <circle cx="253" cy="160" r="5" fill="#fff" opacity="0.4"/>
+  <path d="M260 148 L263 142 L267 148" stroke="#3d6a2c" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Hojas -->
+  <g fill="#6db74a" opacity="0.8">
+    <path d="M120 155 Q112 145 118 138 Q128 140 126 152 Z"/>
+    <path d="M270 145 Q278 135 286 142 Q282 155 270 150 Z"/>
+  </g>
+
+  <!-- Etiqueta -->
+  <rect x="120" y="270" width="160" height="20" rx="10" fill="#2e9e6a"/>
+  <text x="200" y="284" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="1">FRESCO DE CAMPO</text>
+
+  <!-- Decoración -->
+  <circle cx="60" cy="60" r="3" fill="#6db74a" opacity="0.4"/>
+  <circle cx="340" cy="50" r="4" fill="#ff8d3a" opacity="0.4"/>
+  <circle cx="50" cy="110" r="2" fill="#6db74a" opacity="0.5"/>
+  <circle cx="350" cy="110" r="3" fill="#ff8d3a" opacity="0.4"/>
+</svg>

@@ -794,7 +794,351 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
 .fade-in { opacity: 0; transform: translateY(20px); transition: all 700ms ease; }
 .fade-in.is-visible { opacity: 1; transform: translateY(0); }
 
+/* ---------- Logo SVG en el brand ---------- */
+.brand img.brand-logo {
+  height: 44px;
+  width: auto;
+}
+.brand img.brand-logo[data-variant="light"] { display: none; }
+.site-footer .brand img.brand-logo[data-variant="dark"] { display: none; }
+.site-footer .brand img.brand-logo[data-variant="light"] { display: block; }
+
+/* ---------- Imágenes ilustrativas ---------- */
+.illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  background: #fff;
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+}
+.illustration--flat {
+  box-shadow: none;
+  border: 0;
+  background: transparent;
+}
+
+.hero-visual {
+  position: relative;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.split-img--svg {
+  background: transparent;
+  padding: 0;
+  aspect-ratio: auto;
+  font-size: 0;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  display: block;
+}
+.split-img--svg img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--c-border);
+  background: #fff;
+}
+
+/* ---------- Trust badges ---------- */
+.trust-bar {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.trust-bar small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #9fb3cf;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: #d6e2f0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.trust-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  box-shadow: 0 0 0 3px rgba(255,107,53,0.2);
+}
+.trust-badge--blue::before { background: var(--c-blue-light); box-shadow: 0 0 0 3px rgba(58,141,214,0.25); }
+.trust-badge--green::before { background: var(--c-success); box-shadow: 0 0 0 3px rgba(46,158,106,0.25); }
+
+/* ---------- Pill badge en cards ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(46,158,106,0.12);
+  color: var(--c-success);
+  margin-bottom: 14px;
+}
+.badge--blue  { background: rgba(30,111,184,0.12); color: var(--c-blue); }
+.badge--orange{ background: rgba(255,107,53,0.12); color: var(--c-accent); }
+.badge--dark  { background: rgba(10,37,64,0.08); color: var(--c-navy); }
+
+/* ---------- Card premium (con sombra grande y subtle glow) ---------- */
+.card--featured {
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 2px 10px rgba(10,37,64,0.04);
+}
+.card--featured::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(30,111,184,0.25), rgba(255,107,53,0.25));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ---------- Sector card con imagen ---------- */
+.sector-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: all var(--t-mid);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.sector-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.sector-card-image {
+  aspect-ratio: 4/3;
+  background: var(--c-bg-2);
+  overflow: hidden;
+  position: relative;
+}
+.sector-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-mid);
+}
+.sector-card:hover .sector-card-image img { transform: scale(1.05); }
+.sector-card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sector-card-body h3 { margin: 0 0 8px; }
+.sector-card-body p { margin: 0; font-size: 0.92rem; }
+.sector-card-body .card-link { margin-top: auto; padding-top: 16px; }
+
+/* ---------- KPI refinado ---------- */
+.kpi {
+  position: relative;
+  overflow: hidden;
+}
+.kpi::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-blue), var(--c-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-mid) 0.1s;
+}
+.kpi.is-visible::before, .kpi:hover::before { transform: scaleX(1); }
+
+/* ---------- Hero refinements ---------- */
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  pointer-events: none;
+  opacity: 0.05;
+}
+.hero-cta .btn--primary {
+  box-shadow: 0 10px 30px rgba(255,107,53,0.35);
+}
+
+/* ---------- Card icon refinado ---------- */
+.card-icon {
+  position: relative;
+  background: linear-gradient(135deg, rgba(30,111,184,0.12), rgba(255,107,53,0.10));
+  transition: transform var(--t-mid);
+}
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(-3deg);
+}
+.card-icon::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--c-blue), var(--c-accent));
+  z-index: -1;
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity var(--t-mid);
+}
+.card:hover .card-icon::after { opacity: 0.4; }
+
+/* ---------- Hero card refinado ---------- */
+.hero-card {
+  position: relative;
+  transition: transform var(--t-mid);
+}
+.hero-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--r-xl);
+  background: linear-gradient(135deg, rgba(255,107,53,0.3), rgba(30,111,184,0.3));
+  opacity: 0.6;
+  filter: blur(20px);
+  z-index: -1;
+}
+.hero-card:hover { transform: translateY(-4px); }
+
+/* ---------- Scroll indicator en hero ---------- */
+.scroll-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #9fb3cf;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+  animation: bounceY 2s infinite;
+}
+.scroll-hint::after {
+  content: "";
+  width: 2px;
+  height: 28px;
+  background: #9fb3cf;
+  border-radius: 2px;
+}
+@keyframes bounceY {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+@media (max-width: 880px) { .scroll-hint { display: none; } }
+
+/* ---------- Testimonials ---------- */
+.testimonial {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: 36px;
+  position: relative;
+}
+.testimonial::before {
+  content: "\201C";
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  font-size: 6rem;
+  color: var(--c-accent);
+  line-height: 1;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+.testimonial p {
+  font-size: 1.05rem;
+  color: var(--c-text);
+  font-style: italic;
+  margin: 0 0 20px;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c-blue), var(--c-navy));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.testimonial-author strong { display: block; color: var(--c-navy); font-size: 0.95rem; }
+.testimonial-author span { color: var(--c-text-soft); font-size: 0.85rem; }
+
+/* ---------- Banner de urgencia (mini CTA) ---------- */
+.mini-cta {
+  background: var(--c-navy);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+.mini-cta strong { color: var(--c-accent-2); }
+.mini-cta a { color: #fff; text-decoration: underline; }
+
 /* ---------- Print friendly ---------- */
 @media print {
-  .site-header, .site-footer, .cta-banner { display: none; }
+  .site-header, .site-footer, .cta-banner, .mini-cta { display: none; }
 }

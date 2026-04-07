@@ -18,6 +18,12 @@
 <link rel="alternate" hreflang="it" href="/it/index.html">
 <link rel="alternate" hreflang="x-default" href="/index.html">
 <link rel="canonical" href="https://www.vglogistics.es/">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+<meta name="theme-color" content="#0a2540">
+<meta property="og:image" content="https://www.vglogistics.es/assets/img/og-image.svg">
+<meta property="og:url" content="https://www.vglogistics.es/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -48,13 +54,19 @@
 </head>
 <body>
 
+<!-- ============ MINI CTA ============ -->
+<div class="mini-cta">
+  <div class="container">
+    📞 <strong>+34 973 677 173</strong> · admin@vglogistics.es · <a href="contacto.html#cotizar">Solicita cotización en 24 h</a>
+  </div>
+</div>
+
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Principal">
       <a href="index.html" class="brand">
-        <span class="brand-mark">VGL</span>
-        <span>VG Logistics<small>Committed Frigo Transport</small></span>
+        <img src="assets/img/logo.svg" alt="VG Logistics" class="brand-logo" data-variant="dark">
       </a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -106,19 +118,20 @@
           <div><strong data-count="24" data-suffix="/7">0</strong><span>Trazabilidad</span></div>
         </div>
       </div>
-      <div class="hero-card">
-        <h3>¿Por qué VG Logistics?</h3>
-        <p style="color:#cbd6e6;margin-bottom:0;">Más que un transportista: un partner logístico para tu cadena de frío.</p>
-        <ul>
-          <li>Flota propia de semirremolques frigoríficos certificados ATP.</li>
-          <li>Control termográfico remoto y registro continuo de temperatura.</li>
-          <li>GPS en tiempo real con alertas y reporte al cliente.</li>
-          <li>Operativa en rutas complejas: Rumanía, Hungría, Chequia y Este de Europa.</li>
-          <li>Equipo multilingüe con experiencia en CMR e incidencias en frontera.</li>
-        </ul>
+      <div class="hero-visual">
+        <img src="assets/img/truck-hero.svg" alt="Semirremolque frigorífico VG Logistics rodando por Europa" loading="eager">
       </div>
     </div>
+    <div class="trust-bar">
+      <small>De confianza para</small>
+      <span class="trust-badge trust-badge--green">ATP Certificado</span>
+      <span class="trust-badge trust-badge--blue">Euro 6</span>
+      <span class="trust-badge">GPS 24/7</span>
+      <span class="trust-badge trust-badge--blue">CMR Digital</span>
+      <span class="trust-badge">Bi-temperatura</span>
+    </div>
   </div>
+  <div class="scroll-hint">Scroll</div>
 </section>
 
 <!-- ============ KPIs ============ -->
@@ -195,22 +208,42 @@
       <h2>Especialistas en alimentación perecedera</h2>
       <p>Conocemos los requisitos de temperatura, manipulación y trazabilidad de cada sector que atendemos.</p>
     </div>
-    <div class="sector-grid">
-      <a href="sectores.html#carnico" class="sector-chip">
-        <div class="sector-chip-emoji">🥩</div>
-        <div><strong>Cárnico</strong><span>Refrigerado y congelado</span></div>
+    <div class="cards">
+      <a href="sectores.html#carnico" class="sector-card">
+        <div class="sector-card-image"><img src="assets/img/sector-meat.svg" alt="Transporte cárnico refrigerado" loading="lazy"></div>
+        <div class="sector-card-body">
+          <span class="badge badge--orange">Cárnico</span>
+          <h3>Carne fresca y congelada</h3>
+          <p>Vacuno, porcino, ovino y aves. De +1 °C a −25 °C según el producto.</p>
+          <span class="card-link">Ver sector</span>
+        </div>
       </a>
-      <a href="sectores.html#hortofruticola" class="sector-chip">
-        <div class="sector-chip-emoji">🍎</div>
-        <div><strong>Hortofrutícola</strong><span>Fruta y verdura fresca</span></div>
+      <a href="sectores.html#hortofruticola" class="sector-card">
+        <div class="sector-card-image"><img src="assets/img/sector-produce.svg" alt="Transporte hortofrutícola" loading="lazy"></div>
+        <div class="sector-card-body">
+          <span class="badge">Hortofrutícola</span>
+          <h3>Fruta y verdura fresca</h3>
+          <p>Producto fresco del arco mediterráneo a los grandes mercados europeos.</p>
+          <span class="card-link">Ver sector</span>
+        </div>
       </a>
-      <a href="sectores.html#lacteo" class="sector-chip">
-        <div class="sector-chip-emoji">🥛</div>
-        <div><strong>Lácteo</strong><span>Cadena de frío estricta</span></div>
+      <a href="sectores.html#lacteo" class="sector-card">
+        <div class="sector-card-image"><img src="assets/img/sector-dairy.svg" alt="Transporte lácteo" loading="lazy"></div>
+        <div class="sector-card-body">
+          <span class="badge badge--blue">Lácteo</span>
+          <h3>Leche y derivados</h3>
+          <p>Cadena de frío continua y trazable entre centrales y distribución.</p>
+          <span class="card-link">Ver sector</span>
+        </div>
       </a>
-      <a href="sectores.html#alimentacion" class="sector-chip">
-        <div class="sector-chip-emoji">🍽️</div>
-        <div><strong>Alimentación</strong><span>Producto elaborado</span></div>
+      <a href="sectores.html#alimentacion" class="sector-card">
+        <div class="sector-card-image"><img src="assets/img/sector-food.svg" alt="Alimentación elaborada" loading="lazy"></div>
+        <div class="sector-card-body">
+          <span class="badge badge--dark">Alimentación</span>
+          <h3>Platos preparados y elaborados</h3>
+          <p>Producto terminado, refrigerado o ultracongelado, listo para distribución.</p>
+          <span class="card-link">Ver sector</span>
+        </div>
       </a>
     </div>
   </div>
@@ -295,6 +328,30 @@
   </div>
 </section>
 
+<!-- ============ TESTIMONIOS ============ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Lo que dicen de nosotros</span>
+      <h2>Confianza construida envío a envío</h2>
+    </div>
+    <div class="cards">
+      <article class="testimonial">
+        <p>Llevamos años exportando fruta a Centro Europa con VG Logistics. La trazabilidad en tiempo real y la fiabilidad en frontera nos dan tranquilidad en cada campaña.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">JM</div><div><strong>Cliente del sector hortofrutícola</strong><span>Lleida — Catalunya</span></div></div>
+      </article>
+      <article class="testimonial">
+        <p>El control termográfico continuo y los reportes por carga marcan la diferencia. En carne fresca no podemos permitirnos sorpresas, y nunca las hemos tenido.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">RC</div><div><strong>Distribuidor cárnico</strong><span>Aragón — España</span></div></div>
+      </article>
+      <article class="testimonial">
+        <p>Pocas operadoras manejan los corredores del Este como ellos. Para nuestros tráficos a Rumanía y Hungría son nuestro proveedor de cabecera.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">AT</div><div><strong>Agente logístico</strong><span>Barcelona — España</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section class="section">
   <div class="container">
@@ -314,8 +371,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">
-          <span class="brand-mark">VGL</span>
-          <span style="color:#fff;">VG Logistics<small>Committed Frigo Transport</small></span>
+          <img src="assets/img/logo-light.svg" alt="VG Logistics" class="brand-logo" data-variant="light">
         </div>
         <p>Vidal Gurghian Logistics S.L. — Operador de transporte frigorífico internacional con base en Lleida. Especialistas en alimentación perecedera por toda Europa.</p>
       </div>

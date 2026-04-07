@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-label="VG Logistics">
+  <defs>
+    <linearGradient id="vglgl-mark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e6fb8"/>
+      <stop offset="100%" stop-color="#3a8dd6"/>
+    </linearGradient>
+    <linearGradient id="vglgl-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffae00"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="8" width="54" height="48" rx="10" fill="url(#vglgl-mark)"/>
+  <path d="M14 22 L22 42 L30 22" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M34 22 Q44 22 44 32 Q44 42 34 42 L34 33 L40 33" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="2" y="52" width="54" height="4" rx="2" fill="url(#vglgl-accent)"/>
+  <text x="68" y="32" font-family="Inter, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="900" fill="#ffffff" letter-spacing="-0.3">VG Logistics</text>
+  <text x="68" y="50" font-family="Inter, -apple-system, Segoe UI, sans-serif" font-size="9" font-weight="600" fill="#9fb3cf" letter-spacing="1.6">COMMITTED FRIGO TRANSPORT</text>
+</svg>

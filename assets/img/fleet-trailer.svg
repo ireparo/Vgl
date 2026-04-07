@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-label="Semirremolque frigorífico">
+  <defs>
+    <linearGradient id="ft-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eef3f9"/>
+      <stop offset="100%" stop-color="#f6f9fc"/>
+    </linearGradient>
+    <linearGradient id="ft-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#eef3f9"/>
+      <stop offset="100%" stop-color="#d8e1ec"/>
+    </linearGradient>
+    <linearGradient id="ft-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#11355c"/>
+      <stop offset="100%" stop-color="#0a2540"/>
+    </linearGradient>
+    <filter id="ft-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="360" fill="url(#ft-sky)"/>
+  <line x1="0" y1="300" x2="600" y2="300" stroke="#d8e1ec" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Sombra del semirremolque -->
+  <ellipse cx="310" cy="310" rx="240" ry="6" fill="#0a2540" opacity="0.2"/>
+
+  <g filter="url(#ft-shadow)">
+    <!-- Grupo frigorífico superior -->
+    <rect x="100" y="60" width="420" height="26" rx="6" fill="url(#ft-dark)"/>
+    <rect x="110" y="66" width="72" height="14" rx="2" fill="#1e6fb8"/>
+    <g fill="#8ec5ff">
+      <circle cx="120" cy="73" r="2"/>
+      <circle cx="130" cy="73" r="2"/>
+      <circle cx="140" cy="73" r="2"/>
+      <circle cx="150" cy="73" r="2"/>
+      <circle cx="160" cy="73" r="2"/>
+      <circle cx="170" cy="73" r="2"/>
+    </g>
+    <circle cx="490" cy="73" r="6" fill="#ff6b35"/>
+    <circle cx="490" cy="73" r="3" fill="#fff"/>
+
+    <!-- Cuerpo -->
+    <rect x="100" y="86" width="420" height="200" rx="8" fill="url(#ft-body)" stroke="#0a2540" stroke-width="2.5"/>
+
+    <!-- Paneles del cuerpo -->
+    <g stroke="#b8c5d6" stroke-width="1" fill="none">
+      <line x1="160" y1="90" x2="160" y2="282"/>
+      <line x1="220" y1="90" x2="220" y2="282"/>
+      <line x1="280" y1="90" x2="280" y2="282"/>
+      <line x1="340" y1="90" x2="340" y2="282"/>
+      <line x1="400" y1="90" x2="400" y2="282"/>
+      <line x1="460" y1="90" x2="460" y2="282"/>
+    </g>
+
+    <!-- Logo VGL grande -->
+    <g transform="translate(170,130)">
+      <rect width="120" height="100" rx="10" fill="#0a2540"/>
+      <text x="60" y="50" font-family="Inter, sans-serif" font-size="32" font-weight="900" fill="#fff" text-anchor="middle">VGL</text>
+      <rect x="10" y="62" width="100" height="3" rx="1.5" fill="#ff6b35"/>
+      <text x="60" y="80" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#ff6b35" text-anchor="middle" letter-spacing="1.8">COMMITTED FRIGO</text>
+      <text x="60" y="93" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#8ec5ff" text-anchor="middle" letter-spacing="1.5">TRANSPORT</text>
+    </g>
+
+    <!-- Panel de temperatura -->
+    <g transform="translate(320,130)">
+      <rect width="140" height="100" rx="8" fill="#fff" stroke="#1e6fb8" stroke-width="2"/>
+      <rect width="140" height="26" rx="8" fill="#1e6fb8"/>
+      <text x="70" y="18" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="1.5">TEMPERATURE</text>
+      <text x="70" y="62" font-family="Inter, sans-serif" font-size="28" font-weight="900" fill="#0a2540" text-anchor="middle">−20°C</text>
+      <g transform="translate(20,75)" fill="#2e9e6a">
+        <circle cx="5" cy="5" r="3"/>
+        <text x="14" y="9" font-family="Inter, sans-serif" font-size="8" font-weight="700">ATP</text>
+      </g>
+      <g transform="translate(55,75)" fill="#1e6fb8">
+        <circle cx="5" cy="5" r="3"/>
+        <text x="14" y="9" font-family="Inter, sans-serif" font-size="8" font-weight="700">GPS</text>
+      </g>
+      <g transform="translate(95,75)" fill="#ff6b35">
+        <circle cx="5" cy="5" r="3"/>
+        <text x="14" y="9" font-family="Inter, sans-serif" font-size="8" font-weight="700">LIVE</text>
+      </g>
+    </g>
+
+    <!-- Puerta trasera -->
+    <rect x="470" y="100" width="42" height="170" rx="3" fill="none" stroke="#b8c5d6" stroke-width="1.5"/>
+    <circle cx="490" cy="185" r="4" fill="#1e6fb8"/>
+  </g>
+
+  <!-- Ruedas -->
+  <g>
+    <circle cx="160" cy="290" r="22" fill="#0a2540"/>
+    <circle cx="160" cy="290" r="14" fill="#1a3556"/>
+    <circle cx="160" cy="290" r="6" fill="#4a5b73"/>
+    <g stroke="#4a5b73" stroke-width="2">
+      <line x1="160" y1="280" x2="160" y2="300"/>
+      <line x1="150" y1="290" x2="170" y2="290"/>
+    </g>
+  </g>
+  <g>
+    <circle cx="230" cy="290" r="22" fill="#0a2540"/>
+    <circle cx="230" cy="290" r="14" fill="#1a3556"/>
+    <circle cx="230" cy="290" r="6" fill="#4a5b73"/>
+  </g>
+  <g>
+    <circle cx="400" cy="290" r="22" fill="#0a2540"/>
+    <circle cx="400" cy="290" r="14" fill="#1a3556"/>
+    <circle cx="400" cy="290" r="6" fill="#4a5b73"/>
+  </g>
+  <g>
+    <circle cx="470" cy="290" r="22" fill="#0a2540"/>
+    <circle cx="470" cy="290" r="14" fill="#1a3556"/>
+    <circle cx="470" cy="290" r="6" fill="#4a5b73"/>
+  </g>
+
+  <!-- Badge ATP -->
+  <g transform="translate(40,250)">
+    <circle cx="30" cy="30" r="28" fill="#2e9e6a"/>
+    <circle cx="30" cy="30" r="24" fill="none" stroke="#fff" stroke-width="2"/>
+    <text x="30" y="28" font-family="Inter, sans-serif" font-size="12" font-weight="900" fill="#fff" text-anchor="middle">ATP</text>
+    <text x="30" y="40" font-family="Inter, sans-serif" font-size="6" font-weight="700" fill="#fff" text-anchor="middle">CERTIFIED</text>
+  </g>
+
+  <!-- Badge Euro 6 -->
+  <g transform="translate(520,250)">
+    <circle cx="30" cy="30" r="28" fill="#1e6fb8"/>
+    <circle cx="30" cy="30" r="24" fill="none" stroke="#fff" stroke-width="2"/>
+    <text x="30" y="26" font-family="Inter, sans-serif" font-size="9" font-weight="800" fill="#fff" text-anchor="middle">EURO</text>
+    <text x="30" y="40" font-family="Inter, sans-serif" font-size="15" font-weight="900" fill="#fff" text-anchor="middle">6</text>
+  </g>
+</svg>

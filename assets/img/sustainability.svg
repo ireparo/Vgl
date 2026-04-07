@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" role="img" aria-label="Sostenibilidad VG Logistics">
+  <defs>
+    <linearGradient id="s-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3f2dc"/>
+      <stop offset="100%" stop-color="#f0f9ea"/>
+    </linearGradient>
+    <radialGradient id="s-earth">
+      <stop offset="0%" stop-color="#8ec5ff"/>
+      <stop offset="100%" stop-color="#1e6fb8"/>
+    </radialGradient>
+    <linearGradient id="s-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8fd96c"/>
+      <stop offset="100%" stop-color="#2e9e6a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="500" height="380" rx="20" fill="url(#s-bg)"/>
+
+  <!-- Planeta grande -->
+  <g transform="translate(250,190)">
+    <circle r="110" fill="url(#s-earth)" opacity="0.15"/>
+    <circle r="85" fill="url(#s-earth)"/>
+    <!-- Continentes simplificados -->
+    <g fill="#2e9e6a" opacity="0.85">
+      <path d="M-30 -40 Q-15 -50 0 -40 Q10 -20 0 -5 Q-20 0 -35 -15 Z"/>
+      <path d="M10 -10 Q30 -20 45 -5 Q50 15 35 25 Q15 20 10 0 Z"/>
+      <path d="M-50 15 Q-35 10 -25 20 Q-20 40 -35 45 Q-55 40 -55 25 Z"/>
+      <path d="M5 35 Q25 30 40 45 Q35 60 15 60 Q-5 50 5 35 Z"/>
+    </g>
+    <!-- Brillo del planeta -->
+    <ellipse cx="-25" cy="-30" rx="15" ry="25" fill="#fff" opacity="0.2"/>
+  </g>
+
+  <!-- Hojas alrededor -->
+  <g>
+    <g transform="translate(120,90) rotate(-20)">
+      <path d="M0 0 Q 20 -30 45 -10 Q 50 20 25 35 Q -5 25 0 0 Z" fill="url(#s-leaf)"/>
+      <path d="M5 5 Q 25 -20 40 -5" stroke="#1e6831" stroke-width="1.5" fill="none"/>
+    </g>
+    <g transform="translate(380,100) rotate(30)">
+      <path d="M0 0 Q 20 -30 45 -10 Q 50 20 25 35 Q -5 25 0 0 Z" fill="url(#s-leaf)"/>
+      <path d="M5 5 Q 25 -20 40 -5" stroke="#1e6831" stroke-width="1.5" fill="none"/>
+    </g>
+    <g transform="translate(100,260) rotate(-60)">
+      <path d="M0 0 Q 15 -25 35 -10 Q 40 15 20 28 Q -5 20 0 0 Z" fill="url(#s-leaf)"/>
+    </g>
+    <g transform="translate(390,270) rotate(60)">
+      <path d="M0 0 Q 15 -25 35 -10 Q 40 15 20 28 Q -5 20 0 0 Z" fill="url(#s-leaf)"/>
+    </g>
+  </g>
+
+  <!-- Camión verde pequeño -->
+  <g transform="translate(200,300)">
+    <rect x="0" y="0" width="60" height="24" rx="3" fill="#2e9e6a"/>
+    <rect x="60" y="8" width="16" height="16" rx="2" fill="#1e6831"/>
+    <text x="30" y="17" font-family="Inter, sans-serif" font-size="8" font-weight="900" fill="#fff" text-anchor="middle">ECO</text>
+    <circle cx="12" cy="26" r="5" fill="#0a2540"/>
+    <circle cx="50" cy="26" r="5" fill="#0a2540"/>
+    <circle cx="68" cy="26" r="5" fill="#0a2540"/>
+  </g>
+
+  <!-- Badges -->
+  <g transform="translate(40,330)">
+    <rect width="110" height="30" rx="15" fill="#fff" stroke="#2e9e6a" stroke-width="2"/>
+    <circle cx="20" cy="15" r="8" fill="#2e9e6a"/>
+    <text x="20" y="19" font-family="Inter, sans-serif" font-size="9" font-weight="900" fill="#fff" text-anchor="middle">€6</text>
+    <text x="70" y="19" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#0a2540" text-anchor="middle">EURO 6</text>
+  </g>
+
+  <g transform="translate(350,330)">
+    <rect width="110" height="30" rx="15" fill="#fff" stroke="#1e6fb8" stroke-width="2"/>
+    <circle cx="20" cy="15" r="8" fill="#1e6fb8"/>
+    <path d="M16 15 Q 18 18 20 14 Q 22 18 24 15" stroke="#fff" stroke-width="1.5" fill="none"/>
+    <text x="70" y="19" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#0a2540" text-anchor="middle">LOW CO₂</text>
+  </g>
+
+  <!-- Flechas de reciclaje decorativas -->
+  <g stroke="#2e9e6a" stroke-width="2.5" fill="none" opacity="0.6">
+    <path d="M330 180 Q 360 175 365 200" marker-end="url(#arr)"/>
+  </g>
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2e9e6a"/>
+    </marker>
+  </defs>
+</svg>
