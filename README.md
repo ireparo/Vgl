@@ -87,18 +87,49 @@ sistema de diseño y el JavaScript funcionan sin cambios.
 - Google Fonts con `preconnect` y `display=swap`.
 - Sin dependencias pesadas: se puede alcanzar Lighthouse 95+ fácilmente.
 
-## Formularios
+## Formularios (Formspree)
 
-Los formularios (cotización y alta de transportistas) están implementados
-como `mailto:` a `admin@vglogistics.es`. Funciona sin backend, pero para
-producción se recomienda integrar un servicio como:
+Los formularios de **cotización** (`contacto.html`, `en/contact.html`) y
+**alta de transportistas** (`transportistas.html`, `en/carriers.html`)
+están preparados para enviar a **Formspree** de forma asíncrona con
+mensajes de éxito/error inline.
 
-- **Formspree**, **Getform**, **Web3Forms** (sin backend propio).
-- Un **endpoint propio** (Node/PHP) con validación y anti-spam.
-- **Zapier / Make** para enviar a CRM.
+### Activar Formspree (5 minutos)
 
-Basta con cambiar el `action` del `<form>` en `contacto.html`,
-`transportistas.html` y sus equivalentes EN.
+1. Crea una cuenta gratuita en **https://formspree.io**.
+2. Crea un **new form** con destino `admin@vglogistics.es`.
+3. Formspree te dará un endpoint como `https://formspree.io/f/xyzabcde`.
+4. Sustituye el placeholder en **dos sitios** del código:
+   - En `assets/js/main.js`, línea de `FORMSPREE_ENDPOINT`:
+     ```js
+     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyzabcde';
+     ```
+   - En los 4 archivos HTML de formularios, el `action` del `<form>`:
+     ```html
+     <form id="quote-form" ... action="https://formspree.io/f/xyzabcde" method="POST">
+     ```
+     Archivos: `contacto.html`, `transportistas.html`,
+     `en/contact.html`, `en/carriers.html`.
+5. Prueba enviando un formulario. El primer envío pedirá confirmación
+   al email destino (proceso de verificación de Formspree).
+
+### Comportamiento
+
+- **Si Formspree está configurado**: el formulario envía los datos vía
+  `fetch()` en segundo plano, muestra un mensaje verde de éxito y
+  resetea los campos.
+- **Si hay error de red**: muestra un mensaje rojo con los datos de
+  contacto directo (email + teléfono) como fallback.
+- **Si el endpoint aún es el placeholder** `REPLACE_WITH_YOUR_FORM_ID`:
+  el formulario cae automáticamente al `mailto:` original (abre el
+  cliente de correo), garantizando que nunca se pierden leads.
+
+### Alternativas
+
+Si prefieres otro servicio: **Getform**, **Web3Forms**, **Basin**,
+**FormBackend**, o tu propio endpoint. Sólo cambia la URL del
+`FORMSPREE_ENDPOINT` y los `action` de los formularios — la lógica del
+fetch con JSON es estándar.
 
 ## Desarrollo local
 

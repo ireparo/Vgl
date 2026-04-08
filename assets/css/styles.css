@@ -1356,6 +1356,41 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
   height: 22px;
 }
 
+/* ---------- Form feedback ---------- */
+.form-feedback {
+  margin-top: 16px;
+  padding: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-radius: var(--r-md);
+  display: none;
+}
+.form-feedback--success,
+.form-feedback--error {
+  display: block;
+  padding: 14px 18px;
+  border: 1px solid;
+}
+.form-feedback--success {
+  background: #e8f7ef;
+  border-color: #2e9e6a;
+  color: #1e6b46;
+}
+.form-feedback--error {
+  background: #fdecef;
+  border-color: var(--c-red);
+  color: var(--c-red-dark);
+}
+.form-feedback a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
 /* ---------- Print friendly ---------- */
 @media print {
   .site-header, .site-footer, .cta-banner, .mini-cta { display: none; }

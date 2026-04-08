@@ -75,13 +75,14 @@
 <section class="section" id="apply"><div class="container">
 <div class="section-head"><span class="eyebrow">Apply</span><h2>Carrier application form</h2><p>Leave us your details and we'll reach out to start the onboarding.</p></div>
 <div style="max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--c-border);border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow-sm);">
-<form id="quote-form" class="form" action="mailto:admin@vglogistics.es" method="post" enctype="text/plain">
+<form id="quote-form" class="form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
 <div class="form-row"><div><label>Full name</label><input type="text" name="name" required></div><div><label>Company / self-employed</label><input type="text" name="company"></div></div>
 <div class="form-row"><div><label>Email</label><input type="email" name="email" required></div><div><label>Phone</label><input type="tel" name="phone" required></div></div>
 <div class="form-row"><div><label>Number of vehicles</label><input type="number" name="vehicles" min="1"></div><div><label>Usual operating area</label><input type="text" name="zone"></div></div>
 <div><label>Comments</label><textarea name="message" placeholder="Tell us briefly about your operation, routes and availability."></textarea></div>
 <div class="form-check"><input type="checkbox" id="gdpr-t" name="gdpr" required><label for="gdpr-t" style="font-weight:400;">I have read and accept the <a href="../legal/privacidad.html">privacy policy</a>.</label></div>
 <button type="submit" class="btn btn--primary">Send application</button>
+<div class="form-feedback" role="status" aria-live="polite"></div>
 </form>
 </div>
 </div></section>
