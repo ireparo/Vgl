@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" role="img" aria-label="Camión VGL circulando por carretera europea">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5a4a"/>
+      <stop offset="45%" stop-color="#c28a7a"/>
+      <stop offset="100%" stop-color="#d4a898"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9b6754"/>
+      <stop offset="100%" stop-color="#7a4a3a"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b88070"/>
+      <stop offset="100%" stop-color="#9b6754"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c98a7a"/>
+      <stop offset="100%" stop-color="#8b5040"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E30613" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#E30613" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#8b0008" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="sun">
+      <stop offset="0%" stop-color="#ffd9b8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffb890" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Cielo -->
+  <rect width="1600" height="430" fill="url(#sky)"/>
+  <!-- Sol difuso -->
+  <circle cx="1100" cy="180" r="220" fill="url(#sun)"/>
+
+  <!-- Nubes muy tenues -->
+  <g fill="#d4a898" opacity="0.5">
+    <ellipse cx="260" cy="150" rx="120" ry="14"/>
+    <ellipse cx="700" cy="110" rx="140" ry="10"/>
+    <ellipse cx="1280" cy="90" rx="100" ry="8"/>
+  </g>
+
+  <!-- Montañas lejanas -->
+  <path d="M0 360 L120 300 L240 340 L360 280 L480 330 L620 270 L760 310 L900 260 L1040 300 L1180 270 L1320 310 L1460 280 L1600 320 L1600 430 L0 430 Z" fill="#8b5a48" opacity="0.7"/>
+
+  <!-- Colinas medias -->
+  <path d="M0 400 L160 360 L320 390 L480 350 L640 380 L800 340 L960 370 L1120 340 L1280 370 L1440 350 L1600 380 L1600 430 L0 430 Z" fill="url(#hill2)"/>
+
+  <!-- Suelo -->
+  <rect y="430" width="1600" height="270" fill="url(#hill)"/>
+
+  <!-- Guardarraíl izquierdo -->
+  <g stroke="#5a3828" stroke-width="3">
+    <line x1="140" y1="440" x2="340" y2="470"/>
+    <line x1="340" y1="470" x2="520" y2="510"/>
+    <line x1="520" y1="510" x2="660" y2="555"/>
+    <line x1="660" y1="555" x2="740" y2="600"/>
+  </g>
+  <g fill="#5a3828">
+    <rect x="180" y="438" width="4" height="14"/>
+    <rect x="260" y="450" width="4" height="16"/>
+    <rect x="340" y="465" width="4" height="18"/>
+    <rect x="430" y="485" width="4" height="20"/>
+    <rect x="520" y="505" width="4" height="22"/>
+    <rect x="620" y="535" width="4" height="24"/>
+    <rect x="700" y="575" width="4" height="26"/>
+  </g>
+
+  <!-- Roca a la izquierda -->
+  <path d="M0 430 Q60 400 120 430 Q80 460 40 450 Q0 455 0 500 L0 700 L180 700 L210 600 L60 530 Z" fill="#8b5040"/>
+  <path d="M0 500 Q40 470 90 490 L110 530 L60 560 Q20 540 0 570 Z" fill="#6b3828" opacity="0.6"/>
+
+  <!-- Carretera -->
+  <path d="M200 700 L720 490 L880 490 L1500 700 Z" fill="url(#road)"/>
+  <!-- Línea central discontinua -->
+  <g fill="#ffd8c8" opacity="0.85">
+    <path d="M790 510 L798 510 L796 520 L788 520 Z"/>
+    <path d="M785 545 L795 545 L792 560 L782 560 Z"/>
+    <path d="M778 590 L790 590 L786 610 L774 610 Z"/>
+    <path d="M768 640 L784 640 L778 670 L762 670 Z"/>
+  </g>
+  <!-- Bordes de carretera -->
+  <path d="M720 490 L200 700" stroke="#ffd8c8" stroke-width="3" opacity="0.6"/>
+  <path d="M880 490 L1500 700" stroke="#ffd8c8" stroke-width="3" opacity="0.6"/>
+
+  <!-- SEMIRREMOLQUE VGL -->
+  <g transform="translate(720,340)">
+    <!-- Semirremolque (caja) -->
+    <rect x="-10" y="0" width="150" height="140" rx="6" fill="#f2e6de" stroke="#2a1a12" stroke-width="2"/>
+    <!-- Perfil lateral líneas -->
+    <g stroke="#b8a095" stroke-width="0.8">
+      <line x1="10" y1="10" x2="10" y2="130"/>
+      <line x1="30" y1="10" x2="30" y2="130"/>
+      <line x1="50" y1="10" x2="50" y2="130"/>
+      <line x1="70" y1="10" x2="70" y2="130"/>
+      <line x1="90" y1="10" x2="90" y2="130"/>
+      <line x1="110" y1="10" x2="110" y2="130"/>
+      <line x1="130" y1="10" x2="130" y2="130"/>
+    </g>
+    <!-- Grupo frigo superior -->
+    <rect x="-12" y="-14" width="154" height="16" rx="3" fill="#1a1a1a"/>
+    <rect x="4" y="-11" width="30" height="10" rx="1" fill="#3a3a3a"/>
+    <!-- Logo VGL gigante en la caja -->
+    <text x="70" y="95" font-family="'Arial Black', Impact, sans-serif" font-size="64" font-weight="900" font-style="italic" fill="#E30613" text-anchor="middle" letter-spacing="-2">VGL</text>
+    <circle cx="108" cy="50" r="6" fill="#1a1a1a"/>
+    <line x1="102" y1="50" x2="114" y2="50" stroke="#fff" stroke-width="0.5"/>
+    <!-- Puerta trasera -->
+    <rect x="132" y="6" width="8" height="128" fill="none" stroke="#b8a095" stroke-width="1"/>
+    <circle cx="136" cy="70" r="1.5" fill="#888"/>
+  </g>
+
+  <!-- CABEZA TRACTORA -->
+  <g transform="translate(860,380)">
+    <!-- Chasis -->
+    <path d="M0 0 L110 0 L125 10 L125 95 L0 95 Z" fill="#f2e6de" stroke="#2a1a12" stroke-width="2"/>
+    <!-- Cabina frontal -->
+    <path d="M0 10 Q0 4 10 4 L95 4 Q108 4 115 14 L122 28 Q126 36 120 40 L0 40 Z" fill="#e8d5cb"/>
+    <!-- Parabrisas -->
+    <path d="M6 10 L90 10 Q100 10 102 18 L108 32 Q110 36 104 36 L6 36 Z" fill="#6b4838" opacity="0.8"/>
+    <!-- Reflejo parabrisas -->
+    <path d="M10 14 L50 14 L48 20 L10 20 Z" fill="#ffffff" opacity="0.15"/>
+    <!-- Parrilla -->
+    <rect x="118" y="50" width="10" height="38" fill="#1a1a1a"/>
+    <rect x="120" y="56" width="6" height="2" fill="#555"/>
+    <rect x="120" y="62" width="6" height="2" fill="#555"/>
+    <rect x="120" y="68" width="6" height="2" fill="#555"/>
+    <rect x="120" y="74" width="6" height="2" fill="#555"/>
+    <!-- Faros -->
+    <circle cx="121" cy="88" r="3" fill="#ffeaa8"/>
+    <circle cx="121" cy="88" r="5" fill="#ffeaa8" opacity="0.5"/>
+    <!-- Espejos retrovisores -->
+    <rect x="-2" y="18" width="6" height="10" fill="#1a1a1a"/>
+  </g>
+
+  <!-- Ruedas -->
+  <g fill="#1a1a1a">
+    <circle cx="755" cy="488" r="11"/>
+    <circle cx="795" cy="488" r="11"/>
+    <circle cx="845" cy="488" r="11"/>
+    <circle cx="900" cy="482" r="11"/>
+    <circle cx="960" cy="482" r="11"/>
+  </g>
+  <g fill="#555">
+    <circle cx="755" cy="488" r="5"/>
+    <circle cx="795" cy="488" r="5"/>
+    <circle cx="845" cy="488" r="5"/>
+    <circle cx="900" cy="482" r="5"/>
+    <circle cx="960" cy="482" r="5"/>
+  </g>
+
+  <!-- OVERLAY ROJIZO GENERAL (efecto tinte) -->
+  <rect width="1600" height="700" fill="url(#overlay)"/>
+
+  <!-- Vignette oscuro -->
+  <radialGradient id="vig">
+    <stop offset="50%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.35"/>
+  </radialGradient>
+  <rect width="1600" height="700" fill="url(#vig)"/>
+</svg>
