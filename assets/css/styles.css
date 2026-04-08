@@ -462,13 +462,15 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
 }
 .hero-slogan {
   display: block;
-  font-family: "Dancing Script", "Brush Script MT", cursive, Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-family: "Allura", "Great Vibes", "Brush Script MT", cursive, Georgia, serif;
+  font-size: clamp(3rem, 6.5vw, 5.2rem);
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   color: #fff;
   margin-top: 18px;
-  text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.4);
 }
 .hero p.lead {
   font-size: 1.15rem;
