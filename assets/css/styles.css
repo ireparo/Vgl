@@ -233,37 +233,24 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
 }
 .btn--light:hover { background: var(--c-bg); }
 
-/* ---------- Header (estilo VGL original con bloque rojo decorativo) ---------- */
+/* ---------- Header (totalmente blanco) ---------- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  border-bottom: 2px solid var(--c-red);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-.site-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 140px;
-  height: 30px;
-  background: var(--c-red);
-  transform: skewX(-14deg);
-  transform-origin: top left;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.95;
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
 }
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 120px;
+  min-height: 110px;
   gap: 20px;
   position: relative;
   z-index: 1;
+  background: #ffffff;
 }
 .brand img.brand-logo { height: 72px; }
 @media (max-width: 600px) { .brand img.brand-logo { height: 56px; } }
@@ -300,33 +287,42 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
   z-index: 2;
-  background: #fff;
+  background: #ffffff;
 }
 .nav-links a {
-  color: var(--c-red);
-  font-weight: 700;
+  color: #1a1a1a;
+  font-weight: 600;
   font-size: 0.92rem;
   position: relative;
   letter-spacing: 0.01em;
-  padding: 4px 0;
+  padding: 6px 0;
+  text-decoration: none;
+  transition: color var(--t-fast);
 }
 .nav-links a:hover {
-  color: var(--c-red-dark);
+  color: var(--c-red);
 }
 .nav-links a.is-active {
   color: var(--c-red);
-  font-weight: 800;
+  font-weight: 700;
 }
 .nav-links a.is-active::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: -8px;
+  left: 0; right: 0; bottom: -10px;
+  height: 3px;
+  background: var(--c-red);
+}
+.nav-links a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -10px;
   height: 3px;
   background: var(--c-red);
 }
