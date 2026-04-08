@@ -143,6 +143,22 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
     );
 }
 
+/* Wrapper del sello ISO en el hero */
+.hero-cert {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 40px;
+  z-index: 2;
+}
+@media (max-width: 880px) {
+  .hero-cert {
+    position: static;
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 /* Badge ISO/Bureau Veritas */
 .cert-badge {
   display: inline-flex;
@@ -430,6 +446,10 @@ p  { margin: 0 0 1em; color: var(--c-text-soft); }
   color: #fff;
   overflow: hidden;
   min-height: 620px;
+}
+.hero > .container { position: relative; }
+@media (max-width: 880px) {
+  .hero { min-height: auto; }
 }
 .hero::before {
   content: "";
